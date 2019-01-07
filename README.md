@@ -22,7 +22,8 @@ and load them within your `init.php` file. You can use the following snippet:
 
 ```php
 if(!function_exists("pd_load_theme")){
-    require_once("system/paw-designer.func.php");
+    // Include the paw-designer.func.php file from your template directory
+    require_once("paw-designer.func.php");
 }
 pd_load_theme();
 ```
