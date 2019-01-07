@@ -9,7 +9,14 @@ Documentation
 -------------
 The documentation is available on [GitHubs Wiki Pages](https://github.com/pytesNET/paw.designer/wiki)!
 
-### Theme Developers
+Instructions - Users
+--------------------
+Plugin users just need to include the **paw.designer** folder to their `bludit-plugins` directory.
+Enable the plugin on the "Bludit Administration" and visit the new Menu Item "Theme Designer".
+You also need to include "paw.designer" compatible themes, of course!
+
+Instructions - Developers
+-------------------------
 As theme developer you need to include the `system/paw-designer.func.php` file inside your template
 and load them within your `init.php` file. You can use the following snippet:
 
@@ -25,16 +32,11 @@ directory of your template. Read more about the [Customizer Functions](https://g
 You can also move or rename the default `theme.json` file using the [`paw.designer-file` key](https://github.com/pytesNET/paw.designer/wiki/Plugin-Functions#pawdesigner-file)
 inside your `metadata.json` file.
 
-#### Support the paw.designer Plugin
+### Support the paw.designer Plugin
 You also **MUST** define the [`paw.designer` key](https://github.com/pytesNET/paw.designer/wiki/Plugin-Functions#imporant)
 within your `metadata.json` file, if you want to support the **paw.designer** plugin too. You can
 also configure the options and menus on the **paw.designer** backend using the respective
 [Plugin Functions](https://github.com/pytesNET/paw.designer/wiki/Plugin-Functions#pd_configure_optionkey-config).
-
-### Plugin Users
-Plugin users just need to include the **paw.designer** folder to their `bludit-plugins` directory.
-Enable the plugin on the "Bludit Administration" and visit the new Menu Item "Theme Designer".
-You also need to include "paw.designer" compatible themes, of course!
 
 Compatible Themes
 -----------------
