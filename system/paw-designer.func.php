@@ -570,7 +570,7 @@
         if(isset($paw_temp_prev)){
             return $paw_temp_prev;
         }
-        return $url->pageNumber > 1;
+        return $url->pageNumber() > 1;
     }
 
     /*
@@ -581,9 +581,9 @@
      |
      |  @return string  The URL for the previous posts page, or an empty string.
      */
-    function pd_prev_page($force){
+    function pd_prev_page($force = false){
         global $url;
-        if(pd_is_preg_page() || $force === true){
+        if(pd_is_prev_page() || $force === true){
             return $url->uri() . "?page=" .  ($url->pageNumber()-1);
         }
         return "";
