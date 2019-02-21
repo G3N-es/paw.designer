@@ -135,7 +135,7 @@
                                     	<div class="col-sm-10">
                                             <?php
                                                 if(method_exists("PawOption", $config["type"])){
-                                                    echo PawOption::$config["type"]($key, $config);
+                                                    echo PawOption::{$config["type"]}($key, $config);
                                                 } else {
                                                     echo PawOption::text($key, $config);
                                                 }
