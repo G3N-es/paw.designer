@@ -3,7 +3,7 @@
  |  paw.Designer - A advanced Theme Engine for Bludit
  |  @file       ./admin/theme.php
  |  @author     SamBrishes <sam@pytes.net>
- |  @version    0.1.0
+ |  @version    0.1.1 [0.1.0] - Alpha
  |
  |  @website    https://github.com/pytesNET/paw.designer
  |  @license    X11 / MIT License
@@ -97,11 +97,11 @@
                     <div class="card">
                         <?php
                             if(file_exists(PATH_THEMES . $theme->getTheme() . DS . "screenshot.png")){
-                                ?><img src="<?php echo DOMAIN_THEME; ?>screenshot.png" /><?php
+                                ?><img src="<?php echo DOMAIN . HTML_PATH_THEMES . $theme->getTheme(); ?>/screenshot.png" /><?php
                             } else if(file_exists(PATH_THEMES . $theme->getTheme() . DS . "screenshot.jpg")){
-                                ?><img src="<?php echo DOMAIN_THEME; ?>screenshot.jpg" /><?php
+                                ?><img src="<?php echo DOMAIN . HTML_PATH_THEMES . $theme->getTheme(); ?>/screenshot.jpg" /><?php
                             } else if(file_exists(PATH_THEMES . $theme->getTheme() . DS . "screenshot.jpeg")){
-                                ?><img src="<?php echo DOMAIN_THEME; ?>screenshot.jpeg" /><?php
+                                ?><img src="<?php echo DOMAIN . HTML_PATH_THEMES . $theme->getTheme(); ?>/screenshot.jpeg" /><?php
                             } else {
                                 ?><span class="screenshot-empty"><span class="oi oi-question-mark"></span><?php $L->p("pd-admin-001"); ?></span><?php
                             }
@@ -135,7 +135,7 @@
                                     	<div class="col-sm-10">
                                             <?php
                                                 if(method_exists("PawOption", $config["type"])){
-                                                    echo PawOption::{$config["type"]}($key, $config);
+                                                    echo call_user_func(array("PawOption", $config["type"]), $key, $config);
                                                 } else {
                                                     echo PawOption::text($key, $config);
                                                 }

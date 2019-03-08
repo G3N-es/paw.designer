@@ -3,7 +3,7 @@
  |  paw.Designer - A advanced Theme Engine for Bludit
  |  @file       ./admin/index.php
  |  @author     SamBrishes <sam@pytes.net>
- |  @version    0.1.0
+ |  @version    0.1.1 [0.1.0] - Alpha
  |
  |  @website    https://github.com/pytesNET/paw.designer
  |  @license    X11 / MIT License
@@ -30,16 +30,17 @@
     // HELPER :: Render Theme
     function pd_admin_render_theme($theme){
         global $L, $site;
+
         ?>
             <div class="paw-theme <?php echo ($theme["dirname"] == $site->theme())? "current": ""; ?>">
                 <a href="<?php echo HTML_PATH_ADMIN_ROOT; ?>designer/<?php echo $theme["dirname"]; ?>" class="theme-screenshot">
                     <?php
                         if(file_exists(PATH_THEMES . $theme["dirname"] . DS . "screenshot.png")){
-                            ?><img src="<?php echo DOMAIN_THEME; ?>screenshot.png" /><?php
+                            ?><img src="<?php echo DOMAIN . HTML_PATH_THEMES . $theme["dirname"]; ?>/screenshot.png" /><?php
                         } else if(file_exists(PATH_THEMES . $theme["dirname"] . DS . "screenshot.jpg")){
-                            ?><img src="<?php echo DOMAIN_THEME; ?>screenshot.jpg" /><?php
+                            ?><img src="<?php echo DOMAIN . HTML_PATH_THEMES . $theme["dirname"]; ?>/screenshot.jpg" /><?php
                         } else if(file_exists(PATH_THEMES . $theme["dirname"] . DS . "screenshot.jpeg")){
-                            ?><img src="<?php echo DOMAIN_THEME; ?>screenshot.jpeg" /><?php
+                            ?><img src="<?php echo DOMAIN . HTML_PATH_THEMES . $theme["dirname"]; ?>/screenshot.jpeg" /><?php
                         } else {
                             ?><span class="screenshot-empty"><span class="oi oi-question-mark"></span><?php $L->p("pd-admin-001"); ?></span><?php
                         }
@@ -96,7 +97,7 @@
                                 <?php echo $theme["name"]; ?>
                                 <div class="mt-1">
                                     <?php if($site->theme() == $theme["dirname"]){ ?>
-                                        <b><?php $L->p("pd-admin-001"); ?></b>
+                                        <b><?php $L->p("pd-admin-002"); ?></b>
                                     <?php } else { ?>
                                         <a href="<?php echo HTML_PATH_ADMIN_ROOT; ?>designer/<?php echo $theme["dirname"]; ?>?activate=true"><?php $L->p("pd-admin-003"); ?></a>
                                     <?php } ?>

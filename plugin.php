@@ -3,7 +3,7 @@
  |  paw.Designer - A advanced Theme Engine for Bludit
  |  @file       ./plugin.php
  |  @author     SamBrishes <sam@pytes.net>
- |  @version    0.1.0
+ |  @version    0.1.1 [0.1.0] - Alpha
  |
  |  @website    https://github.com/pytesNET/paw.designer
  |  @license    X11 / MIT License
@@ -234,8 +234,8 @@
             if(file_exists($this->filenameDb)){
                 if(!defined("PAW_DESIGNER")){
                     define("PAW_DESIGNER", "paw.designer");
-                    define("PAW_DESIGNER_PATH", PATH_PLUGINS . "paw-designer/");
-                    define("PAW_DESIGNER_DOMAIN", DOMAIN_PLUGINS . "paw-designer/");
+                    define("PAW_DESIGNER_PATH", PATH_PLUGINS . basename(__DIR__) . "/");
+                    define("PAW_DESIGNER_DOMAIN", DOMAIN_PLUGINS . basename(__DIR__) . "/");
                     define("PAW_DESIGNER_VERSION", "0.1.0");
                 }
                 if($this->backend){
@@ -339,7 +339,7 @@
          |  @since  0.1.0
          */
         public function adminSidebar(){
-            return '<a href="' . HTML_PATH_ADMIN_ROOT . 'designer"><span class="oi oi-brush"></span>Theme Designer</a>';
+            return '<a href="' . HTML_PATH_ADMIN_ROOT . 'designer" class="nav-link"><span class="oi oi-brush"></span>Theme Designer</a>';
         }
 
         /*

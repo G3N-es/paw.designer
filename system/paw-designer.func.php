@@ -3,7 +3,7 @@
  |  paw.Designer - A advanced Theme Environment for Bludit
  |  @file       ./paw-designer.func.php
  |  @author     SamBrishes <sam@pytes.net>
- |  @version    0.1.0
+ |  @version    0.1.1 [0.1.0] - Alpha
  |
  |  @website    https://github.com/pytesNET/paw.designer
  |  @license    X11 / MIT License
@@ -931,6 +931,7 @@
         /*
          |  CREATE ELEMENT
          |  @since  0.1.0
+         |  @update 0.2.0
          */
         public function create($type, $slug = "", $item = ""){
             global $site;
@@ -969,11 +970,20 @@
                 if((isset($item["children"]) && $this->depth < $this->config["depth"])){
                     $attr["class"] .= " {$this->config["children"]}";
                 }
+                if(isset($item["classes"]) && !empty($item["classes"])){
+                    if(is_array($item["classes"])){
+                        $item["classes"] = implode(" ", $item["classes"]);
+                    }
+                    $attr["class"] .= " " . $item["classes"];
+                }
             }
 
             // Handle Links
             if($type == "link"){
                 $attr["href"] = $site->url() . trim($slug, "/");
+                if(isset($item["target"])){
+                    $attr["target"] = $item["target"];
+                }
             }
 
             // Render Opening Element

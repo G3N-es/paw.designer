@@ -5,6 +5,7 @@ system. The theme extension is just a single file, which theme developers need t
 their `init.php` file, the plugin is completely optional and allows users to configure
 **paw.designer** -compatible themes without touching code from the backend.
 
+
 Documentation
 -------------
 The documentation is available on [GitHubs Wiki Pages](https://github.com/pytesNET/paw.designer/wiki)!
@@ -13,7 +14,13 @@ Instructions - Users
 --------------------
 Plugin users just need to include the **paw.designer** folder to their `bludit-plugins` directory.
 Enable the plugin on the "Bludit Administration" and visit the new Menu Item "Theme Designer".
-You also need to include "paw.designer" compatible themes, of course!
+**NOTE:** You need to include `paw-designer` compatible themes to use the functionallity of this
+plugin, of course.
+
+### Compatible Themes
+The following themes supports the **paw.designer** environment AND plugin:
+
+- [fur.zerendo](https://github.com/pytesNET/fur.zerendo) - A Blogger Template
 
 Instructions - Developers
 -------------------------
@@ -38,12 +45,6 @@ You also **MUST** define the [`paw.designer` key](https://github.com/pytesNET/pa
 within your `metadata.json` file, if you want to support the **paw.designer** plugin too. You can
 also configure the options and menus on the **paw.designer** backend using the respective
 [Plugin Functions](https://github.com/pytesNET/paw.designer/wiki/Plugin-Functions#pd_configure_optionkey-config).
-
-Compatible Themes
------------------
-The following themes supports the **paw.designer** environment AND plugin:
-
-- [fur.zerendo](https://github.com/pytesNET/fur.zerendo) - A Blogger Template
 
 Copyright & License
 -------------------

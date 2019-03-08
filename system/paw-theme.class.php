@@ -3,7 +3,7 @@
  |  paw.Designer - A advanced Theme Engine for Bludit
  |  @file       ./system/paw-theme.class.php
  |  @author     SamBrishes <sam@pytes.net>
- |  @version    0.1.0
+ |  @version    0.1.1 [0.1.0] - Alpha
  |
  |  @website    https://github.com/pytesNET/paw.designer
  |  @license    X11 / MIT License

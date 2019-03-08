@@ -3,7 +3,7 @@
  |  paw.Designer - A advanced Theme Engine for Bludit
  |  @file       ./system/paw-theme.func.php
  |  @author     SamBrishes <sam@pytes.net>
- |  @version    0.1.0
+ |  @version    0.1.1 [0.1.0] - Alpha
  |
  |  @website    https://github.com/pytesNET/paw.designer
  |  @license    X11 / MIT License
@@ -337,14 +337,14 @@
                 "name"      => "query[config][{$id}]",
                 "value"     => "true",
                 "type"      => "checkbox",
-                "class"     => "switch"
+                "class"     => "paw-switch"
             ));
             if($config["value"] == "true" || $config["value"] == true || $config["value"] == "1"){
                 $attr["checked"] = "checked";
             }
 
             // Single Checkboxfield
-            $before = "<div class=\"switch\">";
+            $before = "<div class=\"paw-switch\">";
             $field = self::build("input", $attr, array("type", "value", "checked", "placeholder"));
             $label = "<label for=\"{$id}\" class=\"custom-control-switch\"></label>";
             return $before . $field . $label . "</div>";
