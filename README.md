@@ -22,9 +22,7 @@ The following themes supports the **paw.designer** environment AND plugin:
 
 - [fur.zerendo](https://github.com/pytesNET/fur.zerendo) - A Blogger Template
 
-<br />
 ----------------------
-<br />
 
 Instructions - Developers
 -------------------------
