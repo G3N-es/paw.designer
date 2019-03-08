@@ -22,6 +22,10 @@ The following themes supports the **paw.designer** environment AND plugin:
 
 - [fur.zerendo](https://github.com/pytesNET/fur.zerendo) - A Blogger Template
 
+<br />
+----------------------
+<br />
+
 Instructions - Developers
 -------------------------
 As theme developer you need to include the `system/paw-designer.func.php` file inside your template
